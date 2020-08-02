@@ -3,6 +3,7 @@ package lambda;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.function.Predicate;
 
 /**
  * @author Theon
@@ -33,9 +34,9 @@ public class ExcerciseLambda {
 
     }
 
-    public static void printCondionaly(List<Person> people, Condition condition) {
+    public static void printCondionaly(List<Person> people, Predicate<Person> predicate) {
         for (Person p: people) {
-            if (condition.test(p)) {
+            if (predicate.test(p)) {
                 System.out.println(p);
             }
         }
